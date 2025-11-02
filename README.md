@@ -36,7 +36,7 @@ sitta-praktik/
 ├── laporan.html (laporan monitoring & rekap)
 ├── histori.html (histori transaksi)
 │
-└── README.md (dokumentasi ini)
+└── README.md (dokumentasi)
 ```
 
 ## 💾 **DATA STORAGE**
