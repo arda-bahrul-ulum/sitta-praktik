@@ -11,7 +11,7 @@ Aplikasi ini merupakan hasil dari **Tugas Praktik 1** yang mengimplementasikan b
 ## 📁 **STRUKTUR FILE PROYEK**
 
 ```
-sitta-praktik/a
+sitta-praktik/
 │
 ├── assets/
 │   └── img/
