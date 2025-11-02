@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - SITTA Universitas Terbuka</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="tracking-container">
+        <header class="page-header">
+            <div class="header-content">
+                <div>
+                    <h1>Tracking Pengiriman</h1>
+                    <nav class="breadcrumb">
+                        <a href="dashboard.html">Dashboard</a> / Tracking
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="greeting">
+                        <span id="greetingText">Selamat Datang</span>,
+                        <span id="userName">Pengguna</span>
+                    </div>
+                    <button type="button" class="btn btn-logout" onclick="logout()">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="tracking-main">
+            <div class="search-section">
+                <form id="trackingForm" class="tracking-form">
+                    <div class="form-group">
+                        <label for="nomorDO">Nomor Delivery Order</label>
+                        <input 
+                            type="text" 
+                            id="nomorDO" 
+                            name="nomorDO" 
+                            placeholder="Masukkan nomor DO"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cari</button>
+                </form>
+            </div>
+
+            <div id="trackingResult" class="tracking-result" style="display: none;">
+                <div class="result-header">
+                    <h2>Informasi Pengiriman</h2>
+                </div>
+
+                <div class="result-content">
+                    <div class="info-card">
+                        <h3>Data Mahasiswa</h3>
+                        <div class="info-item">
+                            <span class="label">Nama:</span>
+                            <span id="namaMahasiswa" class="value">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Nomor DO:</span>
+                            <span id="nomorDOValue" class="value">-</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Status Pengiriman</h3>
+                        <div class="status-container">
+                            <div id="statusBadge" class="status-badge">-</div>
+                            <div class="progress-container">
+                                <div id="progressBar" class="progress-bar">
+                                    <div id="progressFill" class="progress-fill"></div>
+                                </div>
+                                <div id="progressText" class="progress-text">0%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Detail Ekspedisi</h3>
+                        <div class="info-item">
+                            <span class="label">Ekspedisi:</span>
+                            <span id="ekspedisi" class="value">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Tanggal Kirim:</span>
+                            <span id="tanggalKirim" class="value">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Paket:</span>
+                            <span id="paket" class="value">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Total:</span>
+                            <span id="total" class="value">-</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Riwayat Perjalanan</h3>
+                        <div id="perjalananList" class="perjalanan-list">
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="trackingError" class="error-message" style="display: none;">
+                <p>Nomor Delivery Order tidak ditemukan!</p>
+            </div>
+        </main>
+
+        <footer class="page-footer">
+            <p>&copy; 2025 SITTA Universitas Terbuka. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div id="customAlert" class="custom-alert-overlay">
+        <div class="custom-alert-box">
+            <div class="custom-alert-icon" id="customAlertIcon"></div>
+            <div class="custom-alert-content">
+                <div class="custom-alert-title" id="customAlertTitle"></div>
+                <div class="custom-alert-message" id="customAlertMessage"></div>
+                <div class="custom-alert-buttons" id="customAlertButtons"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

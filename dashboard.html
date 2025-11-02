@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - SITTA Universitas Terbuka</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <div class="header-content">
+          <h1>SITTA Universitas Terbuka</h1>
+          <div class="header-right">
+            <div class="greeting">
+              <span id="greetingText">Selamat Datang</span>,
+              <span id="userName">Pengguna</span>
+            </div>
+            <button type="button" class="btn btn-logout" onclick="logout()">
+              Logout
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="dashboard-grid">
+          <a href="stok.html" class="dashboard-card">
+            <div class="card-icon">📚</div>
+            <h2>Informasi Bahan Ajar</h2>
+            <p>Lihat dan kelola informasi stok bahan ajar</p>
+          </a>
+
+          <a href="tracking.html" class="dashboard-card">
+            <div class="card-icon">📦</div>
+            <h2>Tracking Pengiriman</h2>
+            <p>Cek status pengiriman bahan ajar</p>
+          </a>
+
+          <a href="laporan.html" class="dashboard-card">
+            <div class="card-icon">📊</div>
+            <h2>Laporan</h2>
+            <p>Monitoring Progress DO Bahan Ajar & Rekap Bahan Ajar</p>
+          </a>
+
+          <a href="histori.html" class="dashboard-card">
+            <div class="card-icon">📋</div>
+            <h2>Histori Transaksi</h2>
+            <p>Lihat riwayat transaksi bahan ajar</p>
+          </a>
+        </div>
+      </main>
+
+      <footer class="dashboard-footer">
+        <p>&copy; 2025 SITTA Universitas Terbuka. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <div id="customAlert" class="custom-alert-overlay">
+      <div class="custom-alert-box">
+        <div class="custom-alert-icon" id="customAlertIcon"></div>
+        <div class="custom-alert-content">
+          <div class="custom-alert-title" id="customAlertTitle"></div>
+          <div class="custom-alert-message" id="customAlertMessage"></div>
+          <div class="custom-alert-buttons" id="customAlertButtons"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

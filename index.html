@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - SITTA Universitas Terbuka</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <header class="login-header">
+          <h1>SITTA</h1>
+          <p>Sistem Informasi Pemesanan Bahan Ajar</p>
+          <p class="subtitle">Universitas Terbuka</p>
+        </header>
+
+        <form id="loginForm" class="login-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="masukkan email anda"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="masukkan password anda"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <div class="login-footer">
+          <button type="button" class="btn-link" id="btnLupaPassword">
+            Lupa Password?
+          </button>
+          <span class="separator">|</span>
+          <button type="button" class="btn-link" id="btnDaftar">Daftar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalLupaPassword" class="modal">
+      <div class="modal-content">
+        <h2>Lupa Password</h2>
+        <p>Silakan hubungi administrator untuk reset password Anda.</p>
+        <p class="info">Email: admin@ut.ac.id</p>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="closeModal('modalLupaPassword')"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <div id="modalDaftar" class="modal">
+      <div class="modal-content">
+        <h2>Daftar Akun Baru</h2>
+        <p>
+          Untuk mendaftar akun baru, silakan hubungi administrator atau UPBJJ
+          setempat.
+        </p>
+        <p class="info">Email: admin@ut.ac.id</p>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="closeModal('modalDaftar')"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <div id="customAlert" class="custom-alert-overlay">
+      <div class="custom-alert-box">
+        <div class="custom-alert-icon" id="customAlertIcon"></div>
+        <div class="custom-alert-content">
+          <div class="custom-alert-title" id="customAlertTitle"></div>
+          <div class="custom-alert-message" id="customAlertMessage"></div>
+          <div class="custom-alert-buttons" id="customAlertButtons"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

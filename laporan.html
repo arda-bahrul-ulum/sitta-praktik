@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan - SITTA Universitas Terbuka</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="tracking-container">
+      <header class="page-header">
+        <div class="header-content">
+          <div>
+            <h1>Laporan</h1>
+            <nav class="breadcrumb">
+              <a href="dashboard.html">Dashboard</a> / Laporan
+            </nav>
+          </div>
+          <div class="header-right">
+            <div class="greeting">
+              <span id="greetingText">Selamat Datang</span>,
+              <span id="userName">Pengguna</span>
+            </div>
+            <button type="button" class="btn btn-logout" onclick="logout()">
+              Logout
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="tracking-main">
+        <div class="tab-navigation">
+          <button
+            class="tab-btn active"
+            onclick="showTab('monitoring', this); return false;"
+          >
+            Monitoring Progress DO
+          </button>
+          <button
+            class="tab-btn"
+            onclick="showTab('rekap', this); return false;"
+          >
+            Rekap Bahan Ajar
+          </button>
+        </div>
+
+        <div id="monitoringTab" class="tab-content active">
+          <div class="filter-row">
+            <div class="form-group">
+              <label for="searchMonitoring">Cari:</label>
+              <input
+                type="text"
+                id="searchMonitoring"
+                class="form-input"
+                placeholder="Cari berdasarkan nomor DO, nama mahasiswa, kode barang, nama barang, atau ekspedisi..."
+                oninput="filterMonitoring()"
+              />
+            </div>
+            <div class="form-group">
+              <label for="filterStatus">Filter Status:</label>
+              <select
+                id="filterStatus"
+                class="form-select"
+                onchange="filterMonitoring()"
+              >
+                <option value="">Semua Status</option>
+                <option value="Proses">Proses</option>
+                <option value="Dalam Perjalanan">Dalam Perjalanan</option>
+                <option value="Dikirim">Dikirim</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="stok-table-container">
+            <table class="stok-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nomor DO</th>
+                  <th>Nama Mahasiswa</th>
+                  <th>Kode Barang</th>
+                  <th>Nama Barang</th>
+                  <th>Tanggal Order</th>
+                  <th>Status</th>
+                  <th>Progress</th>
+                  <th>Ekspedisi</th>
+                </tr>
+              </thead>
+              <tbody id="monitoringTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="rekapTab" class="tab-content">
+          <div class="search-bar">
+            <div class="form-group">
+              <label for="searchRekap">Cari:</label>
+              <input
+                type="text"
+                id="searchRekap"
+                class="form-input"
+                placeholder="Cari berdasarkan kode barang, nama barang, atau jenis barang..."
+                oninput="searchRekap()"
+              />
+            </div>
+          </div>
+
+          <div class="stok-table-container">
+            <table class="stok-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Kode Barang</th>
+                  <th>Nama Barang</th>
+                  <th>Jenis Barang</th>
+                  <th>Stok Tersedia</th>
+                  <th>Total Terjual</th>
+                  <th>Total Pesanan</th>
+                  <th>Persentase Terjual</th>
+                </tr>
+              </thead>
+              <tbody id="rekapTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <p>&copy; 2025 SITTA Universitas Terbuka. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <div id="customAlert" class="custom-alert-overlay">
+      <div class="custom-alert-box">
+        <div class="custom-alert-icon" id="customAlertIcon"></div>
+        <div class="custom-alert-content">
+          <div class="custom-alert-title" id="customAlertTitle"></div>
+          <div class="custom-alert-message" id="customAlertMessage"></div>
+          <div class="custom-alert-buttons" id="customAlertButtons"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
