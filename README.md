@@ -1,4 +1,4 @@
-# SITTA - Sistem Informasi Pemesanan Bahan Ajar
+# SITTA - Sistem Informasi Pemesanan Bahan Ajar - Tugas 1
 
 **Aplikasi Web untuk Manajemen Bahan Ajar dan Tracking Pengiriman**
 
